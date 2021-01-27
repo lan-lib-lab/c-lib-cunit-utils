@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CFLAGS	makefile	/^CFLAGS = -Wall -ggdb $(CFLAGS_INCLUDE_LIB_HEADERS)$/;"	m
+CFLAGS_INCLUDE_LIB_HEADERS	makefile	/^CFLAGS_INCLUDE_LIB_HEADERS = -Iinc $(patsubst %, -I%, $(dir $(wildcard libs\/*\/)))$/;"	m
+CLEANUP_RETURN	src/lib.c	12;"	d	file:
+CUNIT_UTILS_H	build/libcunit_utils-0.1.0/cunit_utils/lib.h	2;"	d
+CUNIT_UTILS_H	build/libcunit_utils-0.2.0/cunit_utils/lib.h	2;"	d
+CUNIT_UTILS_H	inc/lib.h	2;"	d
+CUU_ASSERTEQ_U32	build/libcunit_utils-0.2.0/cunit_utils/lib.h	19;"	d
+CUU_ASSERTEQ_U32	inc/lib.h	19;"	d
+CUU_impl_assert_eq_u32	src/lib.c	/^bool CUU_impl_assert_eq_u32(uint32_t actual, uint32_t expected, const char *actual_expr, const char *expected_expr, int line, const char *file) {$/;"	f
+CUU_utils_try_add_suite	src/lib.c	/^CU_ErrorCode CUU_utils_try_add_suite(CU_pSuite *out, const char *suite_name) {$/;"	f
+CUU_utils_try_add_test	src/lib.c	/^CU_ErrorCode CUU_utils_try_add_test(CU_pSuite suite, void (*test_callback)(void), const char *msg) {$/;"	f
+CU_ASSERT_EQ_U32	build/libcunit_utils-0.1.0/cunit_utils/lib.h	19;"	d
+LDFLAGS	makefile	/^LDFLAGS = $(LDFLAGS_INCLUDE_LIB_DIRS) $(libs)$/;"	m
+LDFLAGS_INCLUDE_LIB_DIRS	makefile	/^LDFLAGS_INCLUDE_LIB_DIRS = -Llibs $(patsubst %, -L%, $(dir $(wildcard libs\/*\/)))$/;"	m
+dep	makefile	/^dep = $(obj:.o=.d)$/;"	m
+exec	makefile	/^exec = $(notdir $(CURDIR))$/;"	m
+install_lib	makefile	/^define install_lib$/;"	m
+libs	makefile	/^libs = $(patsubst lib%, -l%, $(notdir $(basename $(wildcard libs\/*.a) $(wildcard libs\/*\/*.a)))) \\$/;"	m
+obj	makefile	/^obj = $(patsubst src\/%, obj\/%, $(src:.c=.o))$/;"	m
+repo_base	makefile	/^repo_base = $(shell git rev-parse --show-toplevel)$/;"	m
+src	makefile	/^src = $(wildcard src\/*.c)$/;"	m
+version	makefile	/^version = 0.2.0$/;"	m
